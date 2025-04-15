@@ -2,15 +2,15 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import prerender from "@prerenderer/rollup-plugin";
 
-// 환경 변수를 확인하여 Vercel 환경인지 확인
-const isVercel = process.env.VERCEL === "1";
+// 환경 변수로 프리렌더링 스킵 여부 확인
+const skipPrerender = process.env.SKIP_PRERENDER === "true";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    // Vercel 환경이 아닐 때만 프리렌더링 실행
-    ...(!isVercel
+    // 프리렌더링 스킵 여부에 따라 조건부 적용
+    ...(!skipPrerender
       ? [
           prerender({
             routes: ["/", "/a", "/:id"],
