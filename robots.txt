@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://test-seo-sam.netlify.app/sitemap.xml

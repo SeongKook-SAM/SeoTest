@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Acomponents from "./pages/Acomponents.tsx";
 import Bcomponents from "./pages/Bcomponents.tsx";
+import Robot from "./components/Robot.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
+      <Robot />
       <RouterProvider router={router} />
     </HelmetProvider>
   </StrictMode>
