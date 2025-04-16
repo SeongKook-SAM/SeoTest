@@ -12,7 +12,10 @@ const Bcomponents = () => {
         <meta property="og:title" content={`${id} 페이지`} />
         <meta property="og:description" content={`${id} 페이지`} />
         <meta property="og:image" content="https://placehold.co/1200" />
-        <meta property="og:url" content="https://www.google.com" />
+        <meta
+          property="og:url"
+          content={`https://test-seo-sam.netlify.app/${id}`}
+        />
         <meta property="og:type" content="website" />
         {/* Twitter */}
         <meta property="twitter:title" content="동적 파라미터 테스트" />

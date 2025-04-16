@@ -15,7 +15,7 @@ function App() {
           content="SEO 최적화 테스트 연습입니다.(홈)"
         />
         <meta property="og:image" content="https://placehold.co/1200" />
-        <meta property="og:url" content="https://www.google.com" />
+        <meta property="og:url" content="https://test-seo-sam.netlify.app/" />
         <meta property="og:type" content="website" />
         {/* Twitter */}
         <meta property="twitter:title" content="SEO 최적화 테스트(홈)" />
