@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import prerender from "@prerenderer/rollup-plugin";
+import puppeteer from "puppeteer"; // Puppeteer를 임포트합니다.
 
 export default defineConfig({
   plugins: [
@@ -17,10 +18,10 @@ export default defineConfig({
         renderAfterTime: 500,
         puppeteerOptions: {
           headless: true,
-          // 추가: Netlify에서 샌드박스 모드 해제
+          // Netlify 빌드 환경에 맞게 샌드박스 옵션 추가
           args: ["--no-sandbox", "--disable-setuid-sandbox"],
-          // 필요에 따라 실행 경로 명시 (Netlify 빌드 환경에 맞게 수정)
-          executablePath: process.env.CHROME_BIN || "/usr/bin/chromium-browser",
+          // Puppeteer가 설치한 Chromium 바이너리의 경로를 동적으로 가져옵니다.
+          executablePath: puppeteer.executablePath(),
         },
       },
       postProcess(renderedRoute) {
