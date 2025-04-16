@@ -29,7 +29,7 @@ export default defineConfig({
           .replace(/http:/i, "https:")
           .replace(
             /(https:\/\/)?(localhost|127\.0\.0\.1):\d*/i,
-            "http://localhost:4173/"
+            "https://test-seo-sam.netlify.app/"
           );
       },
     }),
