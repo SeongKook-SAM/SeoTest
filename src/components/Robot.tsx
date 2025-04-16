@@ -13,7 +13,7 @@ const Robot = () => (
     {/* 네이버에서 요구하는 경우, 네이버 서치어드바이저의 검증 코드를 입력합니다 */}
     <meta
       name="naver-site-verification"
-      content="YOUR_NAVER_VERIFICATION_CODE"
+      content="044ba04d558188b71772939fb8691f8dc41d57c6"
     />
   </Helmet>
 );
