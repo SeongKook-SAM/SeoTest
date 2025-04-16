@@ -8,6 +8,10 @@ const Robot = () => (
 
     {/* 구글 전용 지시문 (보통 robots 메타 태그와 동일하게 설정) */}
     <meta name="googlebot" content="index,follow" />
+    <meta
+      name="google-site-verification"
+      content="gGRk2qjCXecQ6WmdXgE_3Ov_vvwdljbEvuBd8WJOT38"
+    />
 
     {/* 네이버 사이트 검증 코드 (네이버에서 사이트 소유권 확인용) */}
     {/* 네이버에서 요구하는 경우, 네이버 서치어드바이저의 검증 코드를 입력합니다 */}
