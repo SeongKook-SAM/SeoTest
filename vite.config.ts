@@ -2,12 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import prerender from "@prerenderer/rollup-plugin";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     prerender({
-      routes: ["/", "/a", "/:id"],
+      routes: ["/", "/a", "/example-id"],
       renderer: "@prerenderer/renderer-puppeteer",
       server: {
         port: 4173,
@@ -16,6 +15,11 @@ export default defineConfig({
       rendererOptions: {
         maxConcurrentRoutes: 1,
         renderAfterTime: 500,
+        // Puppeteer 옵션 수정 - 실행 경로를 지정하지 않음
+        puppeteerOptions: {
+          // executablePath 제거
+          headless: true, // 또는 'new'
+        },
       },
       postProcess(renderedRoute) {
         renderedRoute.html = renderedRoute.html
