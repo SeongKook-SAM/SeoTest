@@ -15,10 +15,12 @@ export default defineConfig({
       rendererOptions: {
         maxConcurrentRoutes: 1,
         renderAfterTime: 500,
-        // Puppeteer 옵션 수정 - 실행 경로를 지정하지 않음
         puppeteerOptions: {
-          // executablePath 제거
-          headless: true, // 또는 'new'
+          headless: true,
+          // 추가: Netlify에서 샌드박스 모드 해제
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+          // 필요에 따라 실행 경로 명시 (Netlify 빌드 환경에 맞게 수정)
+          executablePath: process.env.CHROME_BIN || "/usr/bin/chromium-browser",
         },
       },
       postProcess(renderedRoute) {
