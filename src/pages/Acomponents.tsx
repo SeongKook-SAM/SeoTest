@@ -16,7 +16,7 @@ const Acomponents = () => {
           content="A컴포넌트 테스트 연습입니다. A컴포넌트 테스트 연습입니다. A컴포넌트 테스트 연습입니다."
         />
         <meta property="og:image" content="https://placehold.co/1200" />
-        <meta property="og:url" content="https://test-seo-sam.netlify.app//a" />
+        <meta property="og:url" content="https://test-seo-sam.netlify.app/a" />
         <meta property="og:type" content="website" />
         {/* Twitter */}
         <meta property="twitter:title" content="A컴포넌트 테스트 연습(A)" />
